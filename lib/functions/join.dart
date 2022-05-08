@@ -1,5 +1,6 @@
 part of './functions.dart';
 
+/// It joins all elements of the list with one separator and for the last iteration a different separator.
 String join<V>(List<V> list, [String separator = '', String? last]) {
   Iterator<V> iterator = list.iterator;
   if (!iterator.moveNext()) return "";

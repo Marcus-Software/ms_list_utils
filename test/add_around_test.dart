@@ -16,8 +16,8 @@ void main() {
     final initialValue = ['.'];
     final result = addAround(initialValue,
         (int index, String? previousValue, String? nextValue) {
-      if (nextValue == null) return '<';
-      return '>';
+      if (previousValue == null) return '>';
+      return '<';
     });
     expect(result, ['>', '.', '<']);
   });

@@ -1,7 +1,11 @@
 part of './functions.dart';
 
-/// Retorna nova lista com itens gerado ao redor da [lista]
-///
+/// Returns new list with items generated around [list]
+/// ```dart
+/// final list = ['😁','😒','😊'];
+/// final newList = addAround(list, (index,previous,next) => '🍨');
+/// print(newList);//['🍨','😁','🍨','😒','🍨','😊','🍨']
+/// ```
 List<V> addAround<V>(List<V> list, Generator<V> generator) {
   if (list.isEmpty) return [];
   final length = list.length * 2 + 2;
@@ -16,12 +20,16 @@ List<V> addAround<V>(List<V> list, Generator<V> generator) {
   return newList;
 }
 
+/// Returns a preceding element in the index, if out of bounds returns null.
 V? previous<V>(List<V> list, int index) {
   return index == 0 ? null : list[index - 1];
 }
 
+/// Returns an element following the index, if out of bounds returns null.
 V? next<V>(List<V> list, int index) {
+  index++;
   return index >= list.length ? null : list[index];
 }
 
+/// Type definition for callback that creates a new object based on index, previous and or next
 typedef Generator<G> = G Function(int index, G? previous, G? next);
