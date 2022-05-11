@@ -18,6 +18,7 @@ Add useful functions to map:
 * [`firstOrNull`](#firstOrNull) Returns first element in array, if it's empty returns null.
 * [`firstWhereOrAdd`](#firstWhereOrAdd) Returns the first element that satisfies the test if there isn't one add a new
   one and return it.
+* [`flat`](#flat) Returns a flatted a [list] that has other lists inside other lists inside other lists ... recursive
 * [`isFirst`](#isFirst) Returns a true value if element is the first in the list.
 * [`isLast`](#isLast) Returns a true value if element is the last in the list.
 * [`joinLast`](#joinLast) It joins all elements of the list with one separator and for the last iteration a different
@@ -97,7 +98,34 @@ return it.
   });
 ```
 
-see more in [test file](./test/first_where_or_add_test.dart).
+### <a name="flat"></a>flat
+
+The function `flat` returns a flatted a [list] that has other lists inside other lists inside other lists ... recursive
+return it.
+
+``` dart
+  test('flat dynamic', () {
+    final multiList = [
+      1,
+      2,
+      3,
+      [
+        "4",
+        "5",
+        [
+          6,
+          7,
+          [true, true, false]
+        ]
+      ]
+    ];
+    final result = flat(multiList);
+    expect(result, [1, 2, 3, "4", "5", 6, 7, true, true, false]);
+    expect(multiList.flat(), [1, 2, 3, "4", "5", 6, 7, true, true, false]);
+  });
+```
+
+see more in [test file](./test/flat_test.dart).
 
 ### <a name="isFirst"></a>isFirst
 

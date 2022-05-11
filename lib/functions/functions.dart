@@ -4,6 +4,8 @@ part './last_or_null.dart';
 
 part './first_where_or_add.dart';
 
+part './flat.dart';
+
 part './last_where_or_add.dart';
 
 part './add_between.dart';

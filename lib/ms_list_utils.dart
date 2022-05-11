@@ -1,6 +1,7 @@
 library ms_list_utils;
 
 import './functions/functions.dart' as fn;
+
 export './functions/functions.dart';
 
 extension MsListUtils<V> on List<V> {
@@ -57,4 +58,11 @@ extension MsListUtils<V> on List<V> {
 
   /// Creates a stream with the items in the list.
   Stream<V> toStream([Duration? interval]) => fn.toStream(this, interval);
+
+  /// Flatting a list that has other lists inside other lists inside other lists ... recursive
+  /// ```dart
+  /// final multiList = ["Marcus", "Ana", "Emanuel",["PC", "Xbox", "Books"]];
+  /// multiList.flat();// ["Marcus", "Ana", "Emanuel", "PC", "Xbox", "Books"]
+  /// ```
+  List<V> flat() => fn.flat(this);
 }

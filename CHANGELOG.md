@@ -5,3 +5,7 @@
 ## 0.2.0 - 2022/05/08
 
 * Improved documentation
+
+## 0.3.0 - 2022/05/11
+
+* Function flat implemented
