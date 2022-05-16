@@ -65,4 +65,18 @@ extension MsListUtils<V> on List<V> {
   /// multiList.flat();// ["Marcus", "Ana", "Emanuel", "PC", "Xbox", "Books"]
   /// ```
   List<V> flat() => fn.flat(this);
+
+  /// Elements that you have in this and do not have in [other].
+  List<V> diff(List<V> other) => fn.diff(this, other);
+
+  /// Common elements between this list and [other]
+  ///
+  /// In set theory, the intersection of a collection of sets is the set that
+  /// contains their shared elements. Given two sets, A = {2, 3, 4, 7, 10} and B = {1, 3, 5, 7, 9}, their intersection is as follows:
+  /// A ∩ B = {3, 7}
+  List<V> intersection(List<V> other) => fn.intersection(this, other);
+
+  /// Elements that you have in this and do not have in [other].
+  /// Short operator of the [diff] function
+  List<V> operator -(List<V> other) => fn.diff(this, other);
 }

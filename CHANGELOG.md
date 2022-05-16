@@ -9,3 +9,7 @@
 ## 0.3.0 - 2022/05/11
 
 * Function flat implemented
+
+## 0.3.0 - 2022/05/16
+
+* Function diff and intersection implemented

@@ -15,10 +15,12 @@ Add useful functions to map:
 
 * [`addAround`](#addAround) Returns new list with items generated around list.
 * [`addBetween`](#addBetween) Returns new list with items generated between list.
+* [`diff`](#addBetween) Elements that you have in listA and do not have in listB.
 * [`firstOrNull`](#firstOrNull) Returns first element in array, if it's empty returns null.
 * [`firstWhereOrAdd`](#firstWhereOrAdd) Returns the first element that satisfies the test if there isn't one add a new
   one and return it.
 * [`flat`](#flat) Returns a flatted a [list] that has other lists inside other lists inside other lists ... recursive
+* [`intersection`](#flat) Common elements between listA and listB
 * [`isFirst`](#isFirst) Returns a true value if element is the first in the list.
 * [`isLast`](#isLast) Returns a true value if element is the last in the list.
 * [`joinLast`](#joinLast) It joins all elements of the list with one separator and for the last iteration a different
@@ -82,6 +84,23 @@ The function `addBetween` returns new list with items generated between list.
 
 see more in [test file](./test/add_between_test.dart).
 
+### <a name="diff"></a>addBetween
+
+The function `diff` returns elements that you have in listA and do not have in listB.
+
+``` dart
+  test('differences between two lists', () {
+    final listA = [1, 2, 3, 4, 5];
+    final listB = [2, 4, 6];
+    expect(diff(listA, listB), orderedEquals([1, 3, 5]));
+    expect(diff(listB, listA), orderedEquals([6]));
+    expect(listB - listA, orderedEquals([6]));
+    expect(listB.diff(listA), orderedEquals([6]));
+  });
+```
+
+see more in [test file](./test/diff_test.dart).
+
 ### <a name="firstWhereOrAdd"></a>firstWhereOrAdd
 
 The function `firstWhereOrAdd` returns the first element that satisfies the test if there isn't one add a new one and
@@ -125,7 +144,20 @@ return it.
   });
 ```
 
-see more in [test file](./test/flat_test.dart).
+### <a name="intersection"></a>flat
+
+The function `intersection` returns common items between lists
+
+``` dart
+  test('intersection between two lists', () {
+    final listA = [1, 2, 3, 4, 5];
+    final listB = [2, 4, 6];
+    expect(intersection(listA, listB), orderedEquals([2, 4]));
+    expect(listA.intersection(listB), orderedEquals([2, 4]));
+  });
+```
+
+see more in [test file](./test/intersection_test.dart).
 
 ### <a name="isFirst"></a>isFirst
 
