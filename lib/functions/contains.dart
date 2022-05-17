@@ -25,7 +25,7 @@ bool containsAny<E>(Iterable<E> listA, Iterable<E> listB) {
 /// Check if [atLeast] elements in the [listB] is contains in the [listA]
 bool containsAtLeast<E>(Iterable<E> listA, Iterable<E> listB, int atLeast) {
   var matches = containsHits(listA, listB);
-  return matches > atLeast;
+  return matches >= atLeast;
 }
 
 /// Count of items that hit both lists

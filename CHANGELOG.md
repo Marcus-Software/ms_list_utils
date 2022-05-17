@@ -19,3 +19,7 @@
     * containsAtLeast
     * diff
     * intersection
+
+## 0.4.1 - 2022/05/17
+
+* bugfix in containsAtLeast
