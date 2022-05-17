@@ -15,6 +15,10 @@ Add useful functions to map:
 
 * [`addAround`](#addAround) Returns new list with items generated around list.
 * [`addBetween`](#addBetween) Returns new list with items generated between list.
+* [`containsAll`](#containsAll) Returns new list with items generated between list.
+* [`containsAny`](#containsAny) Returns new list with items generated between list.
+* [`containsAtLeast`](#containsAtLeast) Returns new list with items generated between list.
+* [`containsHits`](#containsHits) Returns new list with items generated between list.
 * [`diff`](#addBetween) Elements that you have in listA and do not have in listB.
 * [`firstOrNull`](#firstOrNull) Returns first element in array, if it's empty returns null.
 * [`firstWhereOrAdd`](#firstWhereOrAdd) Returns the first element that satisfies the test if there isn't one add a new

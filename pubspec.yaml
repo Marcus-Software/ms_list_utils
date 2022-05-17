@@ -1,6 +1,6 @@
 name: ms_list_utils
-description: Some help functions for using Lists
-version: 0.3.0
+description: Novas funções para lidar com listas. Com suporte an extensions
+version: 0.4.0
 homepage: https://github.com/Marcus-Software/ms_list_utils
 
 environment:

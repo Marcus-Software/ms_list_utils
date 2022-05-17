@@ -2,6 +2,8 @@ part './add_around.dart';
 
 part './add_between.dart';
 
+part './contains.dart';
+
 part './diff.dart';
 
 part './first_or_null.dart';

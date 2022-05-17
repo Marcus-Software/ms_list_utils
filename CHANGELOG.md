@@ -10,6 +10,12 @@
 
 * Function flat implemented
 
-## 0.3.0 - 2022/05/16
+## 0.4.0 - 2022/05/16
 
-* Function diff and intersection implemented
+* News functions added
+    * containsAll
+    * containsAny
+    * containsHits
+    * containsAtLeast
+    * diff
+    * intersection
