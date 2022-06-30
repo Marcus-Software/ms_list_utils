@@ -7,10 +7,10 @@ part of './functions.dart';
 /// print(newList);//['🍨','😁','🍨','😒','🍨','😊','🍨']
 /// ```
 List<V> addAround<V>(List<V> list, Generator<V> generator) {
-  if (list.isEmpty) return [];
-  final length = list.length * 2 + 2;
-  final newList = <V>[];
-  for (var i = 1, j = 0; i < length; i++) {
+  if (list.isEmpty) return <V>[];
+  final int length = list.length * 2 + 2;
+  final List<V> newList = <V>[];
+  for (int i = 1, j = 0; i < length; i++) {
     if (i.isOdd) {
       newList.add(generator(i, previous<V>(list, j), next<V>(list, j)));
       continue;

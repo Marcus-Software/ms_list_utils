@@ -3,7 +3,7 @@ import 'package:ms_list_utils/ms_list_utils.dart';
 
 void main() {
   test('tests the function is_last.dart', () {
-    final list = [1, 2, 3];
+    final List<int> list = <int>[1, 2, 3];
     expect(isLast(list, 1), isFalse);
     expect(isLast(list, 3), isTrue);
     expect(isLastIndex(list, 1), isFalse);

@@ -3,7 +3,7 @@ import 'package:ms_list_utils/ms_list_utils.dart';
 
 main() {
   test('flat int', () {
-    final multiList = [
+    final List<Object> multiList = [
       1,
       2,
       3,
@@ -13,12 +13,12 @@ main() {
         [6, 7]
       ]
     ];
-    final result = flat(multiList);
+    final List<Object> result = flat(multiList);
     expect(result, [1, 2, 3, 4, 5, 6, 7]);
     expect(multiList.flat(), [1, 2, 3, 4, 5, 6, 7]);
   });
   test('flat String', () {
-    final multiList = [
+    final List<Object> multiList = [
       "a",
       "b",
       "c",
@@ -28,12 +28,12 @@ main() {
         ["f", "g"]
       ]
     ];
-    final result = flat(multiList);
+    final List<Object> result = flat(multiList);
     expect(result, ["a", "b", "c", "d", "e", "f", "g"]);
     expect(multiList.flat(), ["a", "b", "c", "d", "e", "f", "g"]);
   });
   test('flat dynamic', () {
-    final multiList = [
+    final List<Object> multiList = [
       1,
       2,
       3,
@@ -47,17 +47,17 @@ main() {
         ]
       ]
     ];
-    final result = flat(multiList);
+    final List<Object> result = flat(multiList);
     expect(result, [1, 2, 3, "4", "5", 6, 7, true, true, false]);
     expect(multiList.flat(), [1, 2, 3, "4", "5", 6, 7, true, true, false]);
   });
   test('flat dynamic plain list', () {
-    final multiList = [
+    final List<int> multiList = [
       1,
       2,
       3,
     ];
-    final result = flat(multiList);
+    final List<int> result = flat(multiList);
     expect(result, [1, 2, 3]);
     expect(multiList.flat(), [1, 2, 3]);
   });

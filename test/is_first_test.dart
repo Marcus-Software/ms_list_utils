@@ -3,7 +3,7 @@ import 'package:ms_list_utils/ms_list_utils.dart';
 
 void main() {
   test('tests the function is_first.dart', () {
-    final list = [1, 2, 3];
+    final List<int> list = <int>[1, 2, 3];
     expect(isFirst(list, 3), isFalse);
     expect(isFirst(list, 1), isTrue);
     expect(isFirstIndex(list, 3), isFalse);

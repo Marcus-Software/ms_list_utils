@@ -5,9 +5,9 @@ part of './functions.dart';
 /// final multiList = ["Marcus", "Ana", "Emanuel", ["PC", "Xbox", "Books"]];
 /// multiList.flat();// ["Marcus", "Ana", "Emanuel", "PC", "Xbox", "Books"]
 /// ```
-List<V> flat<V>(List list) {
+List<V> flat<V>(Iterable<V> list) {
   return list
-      .expand((element) => element is List ? flat(element) : [element])
+      .expand((V element) => element is List ? flat(element) : <V>[element])
       .cast<V>()
       .toList();
 }

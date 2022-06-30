@@ -4,11 +4,11 @@ import 'package:test/scaffolding.dart';
 
 main() {
   test('differences between two lists', () {
-    final listA = [1, 2, 3, 4, 5];
-    final listB = [2, 4, 6];
-    expect(diff(listA, listB), orderedEquals([1, 3, 5]));
-    expect(diff(listB, listA), orderedEquals([6]));
-    expect(listB - listA, orderedEquals([6]));
-    expect(listB.diff(listA), orderedEquals([6]));
+    final List<int> listA = <int>[1, 2, 3, 4, 5];
+    final List<int> listB = <int>[2, 4, 6];
+    expect(diff(listA, listB), orderedEquals(<int>[1, 3, 5]));
+    expect(diff(listB, listA), orderedEquals(<int>[6]));
+    expect(listB - listA, orderedEquals(<int>[6]));
+    expect(listB.diff(listA), orderedEquals(<int>[6]));
   });
 }
