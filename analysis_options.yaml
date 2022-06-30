@@ -1,1 +1,16 @@
 include: package:flutter_lints/flutter.yaml
+linter:
+  rules:
+    prefer_relative_imports: true
+    always_specify_return_types: true
+    always_specify_types: true
+    always_specify_variable_types: true
+    always_specify_types_in_conditions: true
+    always_specify_types_in_constructors: true
+    always_specify_types_in_functions: true
+    always_specify_types_in_methods: true
+    always_specify_types_in_parameters: true
+    always_specify_types_in_setters: true
+    always_specify_types_in_return_statements: true
+    always_specify_types_in_variable_declarations: true
+    always_specify_types_in_when_statements: true
