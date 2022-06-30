@@ -23,3 +23,14 @@
 ## 0.4.1 - 2022/05/17
 
 * bugfix in containsAtLeast
+
+## 0.5.0 - 2022/05/25
+
+* News functions added
+  * firstWhereOrNull
+  * forEachAsync
+  * groupBySize
+  * lastWhereOrNull
+  * mapAsStream
+  * mapAsync
+* Types in functions and tests
